@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//Object 객체 정의/생성 방법1 : new + 내장 생성 함수
+	var o1 = new Object();
+	o1.name = "둘리";
+	o1.age = 10;
+	console.log(o1);
+	
+	//Object 객체 생성 방법2 : literal
+	var o2 = {};
+	o2.naem = "마이콜";
+	o2.age = 20;
+	console.log(o2);
+	
+	//Object 객체 생성 방법3 : (J)ava(S)cript (O)bject (N)otation
+	var o3 = {
+		"name": "또치", // "" 붙히는게 정석
+		"age" : 30,
+		"print" : function(){
+			console.log(this.name + ":" + this.age) //name을 객체 안에서 찾고 없으면 window까지 올라가서 찾는다.
+		}
+	
+	}
+	console.log(o3);
+</script>
+</head>
+<body>
+	<h1>Object 객체 정의/생성</h1>
+</body>
+</html>

@@ -5,29 +5,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 <script>
-var o1= {}; // 리터럴
-var o2 = new Object(); // 생성자 함수 
-var d = new Date(); // 내장객체를 생성자 함수(내장객체)로 생성
+	var o1 = {}; // 리터럴
+	var o2 = new Object(); // 생성자 함수 
+	var d = new Date(); // 내장객체를 생성자 함수(내장객체)로 생성
 
-console.log(typeof(o1));
-console.log(typeof(o2));
-console.log(typeof(d));
+	console.log(typeof (o1));
+	console.log(typeof (o2));
+	console.log(typeof (d));
 
-var a1 = [10, 20];
-var a2 = new Array(10, 20, 30);
+	var a1 = [ 10, 20 ]; //내장 생성자 함수 (내장객체 Array)로 생성
+	var a2 = new Array(10, 20, 30); //내장 생성자 함수 (내장객체 Array)로 생성
 
-console.log(typeof(a1));
-console.log(typeof(a2));
+	console.log(typeof (a1));
+	console.log(typeof (a2));
 
-var My = function(){ //생성자함수는 대문자로 시작한다. javascript는 카멜표기법
+	var My = function() { //생성자함수는 대문자로 시작한다. javascript는 카멜표기법. 사용자 생성자 함수
 
-	this.a= 10;
-} 
-var m = new My();
+		this.a = 10;
+	}
+	var m = new My(); //사용자 생성자 함수로 생성
 
-console.log(typeof(My));
-console.log(typeof(m));
-console.log(m.a);
+	console.log(typeof (My));
+	console.log(typeof (m));
+
+	// 객체 확장
+
+	//1.number(기본자료형), 불가능
+	var i = 10;
+	i.s = "hello";
+	console.log(i + ":" + i.s);
+
+	var b = true;
+	b.s = "hello";
+	console.log(b + ":" + b.s);
+
+	var s = "hello";
+	s.s = "world";
+	console.log(s + ":" + s.s);
+
+	//2.확장 가능 - function, object
+	var f = function() {
+
+	}
+	f.s = "hello"
+	console.log(f + ":" + f.s);
+
+	var o = {};
+	o.s = "hello";
+	console.log(o + ":" + o.s);
+	
+	//3. 내장 생성자 함수 (내장객체)
+	Object.s = "hello";
+	console.log(Object + ":" + Object.s);
+	
 </script>
 </head>
 <body>
